@@ -1,5 +1,3 @@
-# SEP Helm Chart
-
 ## Overview ✅
 
 This repository contains helper values files and examples for deploying the Starburst Enterprise Platform (SEP) using Helm.

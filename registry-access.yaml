@@ -1,5 +1,5 @@
 registryCredentials:
   enabled: true
-  registry: harbor.starburstdata.net/starburstdata
+  registry: <helm registry url>
   username: <username>
   password: <password>

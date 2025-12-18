@@ -34,6 +34,18 @@ kubectl create secret generic starburstdata --from-file </path/to/license/starbu
 
 ---
 
+## Cluster config
+
+- `sep-prod-setup.yaml` contains the configuration for the Starburst coordinator and workers.
+
+---
+
+## Catalogs
+
+- `sep-prod-catalogs.yaml` demonstrates adding catalogs (the example contains a `faker` connector). Edit this file to add or modify catalogs.
+
+---
+
 ## Install 📦
 
 ### Install or upgrade using the provided values files:
@@ -52,18 +64,6 @@ helm upgrade sep-prod-cluster oci://harbor.starburstdata.net/starburstdata/chart
 ```bash
 helm uninstall sep-prod-cluster
 ```
-
----
-
-## Cluster config
-
-- `sep-prod-setup.yaml` contains the configuration for the Starburst coordinator and workers.
-
----
-
-## Catalogs
-
-- `sep-prod-catalogs.yaml` demonstrates adding catalogs (the example contains a `faker` connector). Edit this file to add or modify catalogs.
 
 ---
 

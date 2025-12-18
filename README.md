@@ -71,7 +71,7 @@ helm uninstall sep-prod-cluster
 - To access the UI if exposed via LoadBalancer, get the external IP/port:
 
 ```bash
-kubectl get svc -n <namespace>
+kubectl get svc
 # then open http://<loadbalancerIP>:8080
 ```
 

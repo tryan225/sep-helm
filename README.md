@@ -41,7 +41,6 @@ kubectl create secret generic starburstdata --from-file </path/to/license/starbu
 ### Install or upgrade using the provided values files:
 
 ```bash
-# install
 helm upgrade sep-prod-cluster oci://harbor.starburstdata.net/starburstdata/charts/starburst-enterprise \
     --install \
     --version 478.0.0 \

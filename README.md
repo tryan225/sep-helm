@@ -38,8 +38,6 @@ kubectl create secret generic starburstdata --from-file </path/to/license/starbu
 
 ## Install 📦
 
-Replace `<release>` and `<namespace>` with your desired names.
-
 ### Install or upgrade using the provided values files:
 
 ```bash

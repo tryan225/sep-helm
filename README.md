@@ -55,6 +55,12 @@ helm uninstall sep-prod-cluster
 
 ---
 
+## Cluster config
+
+- `sep-prod-setup.yaml` contains the configuration for the Starburst coordinator and workers.
+
+---
+
 ## Catalogs
 
 - `sep-prod-catalogs.yaml` demonstrates adding catalogs (the example contains a `faker` connector). Edit this file to add or modify catalogs.

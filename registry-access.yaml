@@ -1,0 +1,5 @@
+registryCredentials:
+  enabled: true
+  registry: harbor.starburstdata.net/starburstdata
+  username: <username>
+  password: <password>

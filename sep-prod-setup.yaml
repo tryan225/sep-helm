@@ -1,0 +1,52 @@
+# Name of the k8s Secret holding the Starburst License file
+starburstPlatformLicense: starburstdata
+
+# The enviroment setting is what you'll see on the main Web UI for the ENVIRONMENT name.
+# The sharedSecret is not a k8s Secret it is what the coordinator and worker will use
+# to confirm internal communications. More can be found in the SEP doc on this.
+environment: starburst_enterprise
+
+coordinator:
+  resources:
+    requests:
+      cpu: 1.0
+      memory: "1Gi"
+    limits:
+      cpu: 4.0
+      memory: "4Gi"
+  nodeMemoryHeadroom: "250Mi"
+  heapSizePercentage: 90
+  heapHeadroomPercentage: 30
+
+  etcFiles:
+    properties:
+      log.properties: |
+        io.trino=DEBUG
+  
+expose:
+  type: "loadBalancer"
+  loadBalancer:
+    name: "starburst"
+    ports:
+      http:
+        port: 8080
+
+worker:
+  replicas: 2
+  # autoscaling:
+  #   enabled: true
+  #   minReplicas: 1
+  #   maxReplicas: 3
+  #   targetCPUUtilizationPercentage: 80
+  # deploymentTerminationGracePeriodSeconds: 300 # 5 minutes
+  # starburstWorkerShutdownGracePeriodSeconds: 120 # 2 minutes
+  resources:
+    requests:
+      cpu: 1.0
+      memory: "1Gi"
+    limits:
+      cpu: 1.0
+      memory: "2Gi"
+  nodeMemoryHeadroom: "200Mi"
+  heapSizePercentage: 90
+  heapHeadroomPercentage: 30

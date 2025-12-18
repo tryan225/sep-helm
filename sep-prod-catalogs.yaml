@@ -1,0 +1,5 @@
+catalogs:
+  faker: |
+    connector.name=faker
+    faker.null-probability=0.1
+    faker.default-limit=1000
